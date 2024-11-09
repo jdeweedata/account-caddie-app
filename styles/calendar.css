@@ -1,0 +1,25 @@
+@import 'react-day-picker/dist/style.css';
+
+.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: #069949;
+  --rdp-background-color: #e5e7eb;
+  --rdp-accent-color-dark: #1D4E4E;
+  --rdp-background-color-dark: #374151;
+  --rdp-outline: 2px solid var(--rdp-accent-color);
+  --rdp-outline-selected: 2px solid var(--rdp-accent-color);
+  margin: 0;
+}
+
+.rdp-day_selected:not([disabled]) { 
+  background-color: var(--rdp-accent-color);
+  color: white;
+}
+
+.rdp-day_selected:hover:not([disabled]) {
+  background-color: var(--rdp-accent-color-dark);
+}
+
+.rdp-day:hover:not([disabled]) {
+  background-color: var(--rdp-background-color);
+}

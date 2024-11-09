@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '../styles/calendar.css';
+
+@layer base {
+  :root {
+    --primary: #069949;
+    --primary-dark: #1D4E4E;
+    --gray: #768A7E;
+    --light: #F5F2EF;
+    --radius: 0.5rem;
+  }
+}
+
+@layer components {
+  .pricing-section {
+    @apply relative mb-20;
+  }
+
+  .pricing-section::before {
+    @apply content-[''] absolute inset-0 bg-gradient-to-b from-transparent via-current to-transparent opacity-5 -z-10;
+  }
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive font sizes */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Fluid typography */
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+}
